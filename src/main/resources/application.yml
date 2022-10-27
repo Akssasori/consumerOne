@@ -1,0 +1,42 @@
+server:
+  port: 5010
+  error:
+    include-message: always
+    include-binding-errors: always
+    include-stacktrace: always
+    include-exception: true
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: basic
+
+logging:
+  level:
+    com.example: TRACE
+    root: INFO
+    org.springframework.web: DEBUG
+    org.hibernate: INFO
+
+spring:
+  rabbitmq:
+    host: 'localhost'
+    password: password
+    port: 5672
+    username: user
+
+rabbitmq:
+  exchange:
+    producer: test.event
+  route:
+    test: event.test.route
+  queue:
+    test: event.test.queue
+
+app:
+  gc-two:
+    url: http://localhost:5003
+    name: gc-two
