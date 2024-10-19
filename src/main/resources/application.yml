@@ -1,3 +1,4 @@
+
 server:
   port: 5010
   error:
@@ -24,17 +25,24 @@ logging:
 spring:
   rabbitmq:
     host: 'localhost'
-    password: password
+    password: guest
     port: 5672
-    username: user
+    username: guest
+  jpa:
+    open-in-view: false
 
-rabbitmq:
-  exchange:
-    producer: test.event
-  route:
-    test: event.test.route
-  queue:
-    test: event.test.queue
+rabbit:
+  config:
+    exchange:
+      shopping: "ex_compras"
+      sales: "ex_vendas"
+    routing:
+      shopping: "router_compras"
+      sales: "router_vendas"
+    queue:
+      shopping: "queue_compras"
+      sales: "queue_vendas"
+      audit: "queue_auditoria"
 
 app:
   gc-two:
