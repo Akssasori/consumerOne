@@ -30,6 +30,11 @@ spring:
     username: guest
   jpa:
     open-in-view: false
+  output:
+    ansi:
+      enabled: ALWAYS
+  application:
+    name: "consumidor01"
 
 rabbit:
   config:

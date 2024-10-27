@@ -16,7 +16,7 @@ public class TransactionDTO {
     private Long id;
     private String name;
     private String type;
-    private LocalDateTime localDateTime;
+//    private LocalDateTime localDateTime;
 
     public Long getId() {
         return id;
@@ -42,13 +42,13 @@ public class TransactionDTO {
         this.type = type;
     }
 
-    public LocalDateTime getLocalDateTime() {
-        return localDateTime;
-    }
-
-    public void setLocalDateTime(LocalDateTime localDateTime) {
-        this.localDateTime = localDateTime;
-    }
+//    public LocalDateTime getLocalDateTime() {
+//        return localDateTime;
+//    }
+//
+//    public void setLocalDateTime(LocalDateTime localDateTime) {
+//        this.localDateTime = localDateTime;
+//    }
 
 
 
@@ -58,7 +58,7 @@ public class TransactionDTO {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", type='" + type + '\'' +
-                ", localDateTime=" + localDateTime +
+//                ", localDateTime=" + localDateTime +
                 '}';
     }
 }
