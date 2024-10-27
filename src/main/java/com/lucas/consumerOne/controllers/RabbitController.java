@@ -24,7 +24,6 @@ public class RabbitController {
 
     private final RabbitListenerEndpointRegistry rabbitListenerEndpointRegistry;
 
-
     public RabbitController(RabbitListenerEndpointRegistry rabbitListenerEndpointRegistry) {
         this.rabbitListenerEndpointRegistry = rabbitListenerEndpointRegistry;
     }
@@ -80,9 +79,9 @@ public class RabbitController {
                 .GET()
                 .build();
 
-//        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
-        return client.send(request, HttpResponse.BodyHandlers.ofString());
+        return response;
     }
 
 }
